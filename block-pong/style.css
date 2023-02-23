@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+.game_win {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  box-shadow: 0 0 5px white, 0 0 10px white;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: start;
+  position: relative;
+}
+
+.game_win .cube {
+  width: 85px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #15ff00, 0 0 5px #15ff00, 0 0 10px #15ff00,
+    inset 0 0 1px #15ff00, inset 0 0 5px #15ff00, inset 0 0 10px #15ff00;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  box-shadow: 0 0 5px red, 0 0 10px red;
+  top: 430px;
+  left: 240px;
+  border-radius: 50%;
+}
+
+.player {
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  background: #00c3ff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00c3ff;
+  top: 450px;
+  left: 200px;
+}
+
+@media (max-width: 767px) {
+  .game_win {
+    transform: scale(0.5);
+  }
+}
